@@ -25,7 +25,16 @@ import freemarker.template.Template;
 import freemarker.template.TemplateException;
 
 /**
- * Created by Olga on 7/15/2016.
+ * 我会把@Service你的类，但将接口的名称作为参数例如注释
+ *
+ * interface ServiceOne {}
+ *
+ * @Service("ServiceOne")
+ * class ServiceOneImpl implements ServiceOne{}
+ * 这样，您将获得所有好处，并且仍然可以注入接口但可以获取类
+ *
+ * @Autowired
+ * private ServiceOne serviceOne;
  */
 @Service("EmailService")
 public class EmailServiceImpl implements EmailService {
